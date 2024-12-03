@@ -27,6 +27,10 @@ const connectDB = async () => {
 
 connectDB()
 
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+
 // Stats endpoint
 app.get('/api/stats', async (req, res) => {
   try {
