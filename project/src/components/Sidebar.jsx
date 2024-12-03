@@ -15,7 +15,7 @@ const Sidebar = ({ currentView, setCurrentView }) => {
   ]
 
   return (
-    <div className="w-64 bg-white shadow-lg">
+    <div className="w-64 bg-white shadow-lg h-screen">
       <div className="p-6">
         <h1 className="text-2xl font-bold text-primary">HMS</h1>
       </div>

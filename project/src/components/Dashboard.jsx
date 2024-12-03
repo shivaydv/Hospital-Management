@@ -111,9 +111,9 @@ export default function Dashboard() {
   const hasStatusData = stats.appointmentsByStatus?.length > 0;
 
   return (
-    <div>
+    <div className="p-4 md:p-8">
       <h2 className="text-2xl font-bold mb-6">Dashboard</h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         <StatCard 
           title="Total Patients" 
           value={stats.totalPatients}
@@ -136,7 +136,7 @@ export default function Dashboard() {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-4 md:p-6 rounded-lg shadow">
           <h3 className="text-lg font-semibold mb-4">Last 7 Days Appointments</h3>
           {hasAppointmentData ? (
             <Line data={lineChartData} options={chartOptions} />
@@ -144,9 +144,9 @@ export default function Dashboard() {
             <EmptyState message="No appointment data available for the last 7 days" />
           )}
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="bg-white p-4 md:p-6 rounded-lg shadow">
           <h3 className="text-lg font-semibold mb-4">Appointments by Status</h3>
-          <div className="w-3/4 mx-auto">
+          <div className="w-full md:w-3/4 mx-auto">
             {hasStatusData ? (
               <Pie data={pieChartData} options={chartOptions} />
             ) : (
