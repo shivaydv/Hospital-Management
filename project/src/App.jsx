@@ -23,8 +23,10 @@ function App() {
   return (
     <div className="flex h-screen bg-gray-50 relative">
       {/* Hamburger Menu Button - Only visible on mobile */}
-      <button 
-        className="lg:hidden fixed top-4 left-4 z-20 p-2 rounded-md hover:bg-gray-200"
+     <div className='lg:hidden fixed w-full px-4 py-2 flex justify-between items-center'>
+      <h1 className='text-2xl font-bold text-primary'>HMS</h1>
+     <button 
+        className=" z-20 p-2 rounded-md hover:bg-gray-200"
         onClick={toggleSidebar}
       >
         <svg 
@@ -41,6 +43,7 @@ function App() {
           />
         </svg>
       </button>
+     </div>
 
       {/* Overlay for mobile when sidebar is open */}
       {isSidebarOpen && (
