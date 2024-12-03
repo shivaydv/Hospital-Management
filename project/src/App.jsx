@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="flex h-screen bg-gray-50 relative">
       {/* Hamburger Menu Button - Only visible on mobile */}
-     <div className='lg:hidden fixed w-full px-4 py-2 flex justify-between items-center'>
+     <div className='lg:hidden fixed w-full bg-white shadow-lg px-4 py-2 flex justify-between items-center'>
       <h1 className='text-2xl font-bold text-primary'>HMS</h1>
      <button 
         className=" z-20 p-2 rounded-md hover:bg-gray-200"
@@ -69,7 +69,7 @@ function App() {
       </div>
 
       {/* Main content with responsive padding */}
-      <main className="flex-1 overflow-y-auto p-4 lg:p-8 w-full lg:ml-0">
+      <main className="flex-1 overflow-y-auto p-4 lg:p-8 w-full lg:ml-0 max-lg:mt-16">
         {views[currentView]}
       </main>
     </div>
