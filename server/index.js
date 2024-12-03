@@ -10,7 +10,13 @@ dotenv.config()
 
 const app = express()
 
-app.use(cors())
+if (process.env.NODE_ENV === 'production') {
+  app.use(cors({
+    origin: ['https://unnati-hms.vercel.app/'],
+    credentials: true
+  }));
+}
+
 app.use(express.json())
 
 // Configure MongoDB connection with retry logic
